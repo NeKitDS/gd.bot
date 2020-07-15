@@ -1,5 +1,6 @@
 import asyncio
 import datetime
+from pathlib import Path
 import traceback
 from typing import Optional
 
@@ -10,6 +11,8 @@ import discord
 import gd
 
 __all__ = ("GDBot", "run_bot", "run_bot_sync")
+
+assets = Path(__file__).parent / "assets"
 
 cogs = ["gdbot.cogs.admin", "gdbot.cogs.mod"]
 
@@ -32,6 +35,9 @@ class GDBot(commands.AutoShardedBot):
 
         self.session = aiohttp.ClientSession(loop=loop)
         self.load_cogs()
+
+    def load_asset(self, name: str) -> discord.File:
+        return discord.File(assets / name, name)
 
     def load_cogs(self) -> None:
         for cog in cogs:
