@@ -14,7 +14,7 @@ __all__ = ("GDBot", "run_bot", "run_bot_sync")
 
 assets = Path(__file__).parent / "assets"
 
-cogs = ["gdbot.cogs.admin", "gdbot.cogs.mod"]
+cogs = ["gdbot.cogs.admin", "gdbot.cogs.meta", "gdbot.cogs.mod"]
 
 description = """
 Discord Bot that can interact with servers of Geometry Dash, and much more!
