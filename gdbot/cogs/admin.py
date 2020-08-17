@@ -50,7 +50,10 @@ class Admin(commands.Cog):
         if content.startswith("```py") and content.endswith("```"):
             content = "\n".join(content.splitlines()[1:])
 
-        content = content.strip("` \n")
+        if content.startswith("`") and content.endswith("`"):
+            content = content.strip("`")
+
+        content = content.strip(" \n")
 
         return content
 
