@@ -12,7 +12,13 @@ class Meta(commands.Cog):
     async def uptime(self, ctx: commands.Context) -> None:
         delta = ctx.message.created_at - self.bot.uptime
 
-        await ctx.send(embed=discord.Embed(title=f"{delta} hours", color=0x7289DA))
+        minutes, seconds = divmod(delta.seconds, 60)
+        hours, minutes = divmod(minutes, 60)
+        days = delta.days
+
+        await ctx.send(
+            embed=discord.Embed(title=f"{days}d {hours}h {minutes}m {seconds}s", color=0x7289DA)
+        )
 
     @commands.command()
     async def ping(self, ctx: commands.Context) -> None:
@@ -22,7 +28,7 @@ class Meta(commands.Cog):
 
         color = 0x77FF77 if ms < HIGH_PING else 0xFF7777
 
-        await message.edit(embed=discord.Embed(title=f"Ping: {ms:.2}ms", color=color))
+        await message.edit(embed=discord.Embed(title=f"Ping: {ms:.2f}ms", color=color))
 
 
 def setup(bot: commands.Bot) -> None:
