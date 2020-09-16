@@ -14,7 +14,7 @@ __all__ = ("GDBot", "run_bot", "run_bot_sync")
 
 assets = Path(__file__).parent / "assets"
 
-cogs = ["gdbot.cogs.admin", "gdbot.cogs.meta", "gdbot.cogs.mod"]
+cogs = ["gd.bot.cogs.admin", "gd.bot.cogs.meta", "gd.bot.cogs.mod"]
 
 description = """
 Discord Bot that can interact with servers of Geometry Dash, and much more!
@@ -75,7 +75,7 @@ async def run_bot(
 
     bot = GDBot(loop=loop)
 
-    client = gd.Client(loop=loop)
+    client = gd.Client()
 
     if gd_user and gd_password:
         try:

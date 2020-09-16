@@ -59,14 +59,14 @@ You can either invoke it from python:
 
 .. code:: python3
 
-    import gdbot
-    gdbot.run_bot_sync(BOT_TOKEN)
+    import gd.bot
+    gd.bot.run_bot_sync(BOT_TOKEN)
 
 Or run a console command:
 
 .. code:: sh
 
-    $ python -m gdbot --token BOT_TOKEN
+    $ python -m gd.bot --token BOT_TOKEN
 
     # OR
 

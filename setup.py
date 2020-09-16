@@ -7,9 +7,9 @@ root = Path(__file__).parent
 
 requirements = (root / "requirements.txt").read_text("utf-8").strip().splitlines()
 
-init = (root / "gdbot" / "__init__.py").read_text("utf-8")
+text = (root / "gd" / "bot" / "__init__.py").read_text("utf-8")
 
-result = re.search(r'^__version__\s*=\s*[\'"]([^\'"]*)[\'"]', init, re.MULTILINE)
+result = re.search(r"^__version__\s*=\s*[\"']([^\"']*)[\"']", text, re.MULTILINE)
 
 if result is None:
     raise RuntimeError("Failed to find version.")
@@ -26,7 +26,7 @@ setup(
     url="https://github.com/NeKitDS/gd.bot",
     project_urls={"Issue tracker": "https://github.com/NeKitDS/gd.bot/issues"},
     version=version,
-    packages=["gdbot", "gdbot.cogs"],
+    packages=["gd", "gd.bot", "gd.bot.cogs"],
     license="MIT",
     description="Discord Bot which can interact with Geometry Dash servers, and much more!",
     long_description=readme,
@@ -43,5 +43,5 @@ setup(
         "Natural Language :: English",
         "Operating System :: OS Independent",
     ],
-    entry_points={"console_scripts": ["gd.bot = gdbot.__main__:main"]},
+    entry_points={"console_scripts": ["gd.bot = gd.bot.__main__:main"]},
 )
