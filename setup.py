@@ -21,10 +21,10 @@ readme = (root / "README.rst").read_text("utf-8")
 
 setup(
     name="gd.bot",
-    author="NeKitDS",
+    author="nekitdev",
     author_email="gdpy13@gmail.com",
-    url="https://github.com/NeKitDS/gd.bot",
-    project_urls={"Issue tracker": "https://github.com/NeKitDS/gd.bot/issues"},
+    url="https://github.com/nekitdev/gd.bot",
+    project_urls={"Issue tracker": "https://github.com/nekitdev/gd.bot/issues"},
     version=version,
     packages=["gd", "gd.bot", "gd.bot.cogs"],
     license="MIT",

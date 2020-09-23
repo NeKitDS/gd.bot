@@ -14,7 +14,7 @@ gd.bot
     :alt: Required Python Versions
 
 .. image:: https://img.shields.io/pypi/status/gd.bot.svg
-    :target: https://github.com/NeKitDS/gd.bot
+    :target: https://github.com/nekitdev/gd.bot
     :alt: Project Development Status
 
 .. image:: https://img.shields.io/pypi/dm/gd.bot.svg
@@ -46,7 +46,7 @@ In order to install the library from source, you can do the following:
 
 .. code:: sh
 
-    $ git clone https://github.com/NeKitDS/gd.bot
+    $ git clone https://github.com/nekitdev/gd.bot
     $ cd gd.bot
     $ python -m pip install -U .
 
@@ -75,4 +75,4 @@ Or run a console command:
 Authors
 -------
 
-This project is mainly developed by `NeKitDS <https://github.com/NeKitDS>`_.
+This project is mainly developed by `nekitdev <https://github.com/nekitdev>`_.
