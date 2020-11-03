@@ -22,7 +22,7 @@ readme = (root / "README.rst").read_text("utf-8")
 setup(
     name="gd.bot",
     author="nekitdev",
-    author_email="gdpy13@gmail.com",
+    author_email="nekitdevofficial@gmail.com",
     url="https://github.com/nekitdev/gd.bot",
     project_urls={"Issue tracker": "https://github.com/nekitdev/gd.bot/issues"},
     version=version,
