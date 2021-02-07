@@ -71,7 +71,7 @@ async def run_bot(
     loop: Optional[asyncio.AbstractEventLoop] = None,
 ) -> None:
     if loop is None:
-        loop = gd.utils.acquire_loop()
+        loop = gd.utils.get_not_running_loop()
 
     bot = GDBot(loop=loop)
 
@@ -80,6 +80,7 @@ async def run_bot(
     if gd_user and gd_password:
         try:
             await client.login(gd_user, gd_password)
+
         except Exception:
             print("Exception caught on logging into GD account.")
             traceback.print_exc()
@@ -96,5 +97,5 @@ async def run_bot(
 def run_bot_sync(
     token: str, gd_user: Optional[str] = None, gd_password: Optional[str] = None
 ) -> None:
-    loop = gd.utils.acquire_loop()
+    loop = gd.utils.get_not_running_loop()
     loop.run_until_complete(run_bot(token, gd_user, gd_password, loop))

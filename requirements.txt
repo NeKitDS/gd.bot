@@ -1,4 +1,4 @@
 discord.py>=1.4.1
-gd.py[image,speedups]>=1.0.0rc1
+gd.py[prelude]>=1.0.0rc1
 import-expression>=1.1.4
 toml>=0.10.0
